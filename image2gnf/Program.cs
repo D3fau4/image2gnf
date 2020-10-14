@@ -11,16 +11,14 @@ namespace image2gnf
         private static void Main(string[] args)
         {
             Stream tmp = File.OpenWrite(args[1]);
-            Console.WriteLine("start");
+            Console.WriteLine("Start:");
             Stream meme = File.OpenRead(args[0]);
             if (DDSExport.CanImportCore(meme) == true)
             {
                 Console.WriteLine("Open DDS");
                 DDSStream DDSFILE = new DDSStream(meme);
-                Console.WriteLine("Decode DDS as Bitmap");
-                Bitmap DecodeIMG = DDSExport.GetBitmapCore(DDSFILE);
-                Console.WriteLine("Open Bitmap as GNFTexture");
-                GNFTexture momo = new GNFTexture(DecodeIMG);
+                Console.WriteLine("Swizzling");
+                GNFTexture momo = new GNFTexture(DDSFILE);
                 Console.WriteLine("Write GNFTexture");
                 GNFexport.ExportCore(momo, tmp);
             }
@@ -30,7 +28,7 @@ namespace image2gnf
             Stream tmp1 = File.OpenRead(args[1]);
             if (GNFexport.CanImportCore(tmp1))
             {
-                Console.WriteLine("GNF es valido");
+                Console.WriteLine("GNF is valid");
             }
         }
     }

@@ -19,15 +19,5 @@ namespace image2gnf
                 return isValid;
             }
         }
-
-        public static DDSStream OpenDDS(Stream stream, string filename = null)
-        {
-            return new DDSStream(stream);
-        }
-
-        public static Bitmap GetBitmapCore(DDSStream obj)
-        {
-            return DDSCodec.DecompressImage(obj);
-        }
     }
 }
