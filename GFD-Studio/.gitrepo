@@ -1,0 +1,12 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = https://github.com/TGEnigma/GFD-Studio.git
+	branch = master
+	commit = 674b93ba3ace79f5d8ee3cdc145bcbccad7a69e0
+	parent = de5ab64ca989f020665e192beed01013f372921f
+	method = merge
+	cmdver = 0.4.1
