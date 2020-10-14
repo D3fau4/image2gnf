@@ -1,0 +1,3 @@
+[submodule "GFD-Studio\\Dependencies\\Scarlet"]
+	path = GFD-Studio\\Dependencies\\Scarlet
+	url = https://github.com/xdanieldzd/Scarlet.git
